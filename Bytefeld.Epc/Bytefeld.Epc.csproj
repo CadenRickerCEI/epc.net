@@ -1,35 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>netstandard1.4;net35</TargetFrameworks>
-    <Authors>Norbert Wagner (nw@bytefeld.com)</Authors>
-    <Company>Bytefeld GmbH &amp; Co. KG</Company>
-    <Description>Electronic Product Code (EPC) Decoding Library for .NET</Description>
-    <Copyright>2017 (c) Bytefeld GmbH &amp; Co. KG</Copyright>
-    <PackageProjectUrl>https://github.com/bytefeld/epc.net</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/bytefeld/epc.net</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageLicenseUrl>https://github.com/bytefeld/epc.net/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>0.5.0-beta2</Version>
-    <PackageId>Bytefeld.EPC</PackageId>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageTags>EPC SSCC SGTIN RFID</PackageTags>
-    <AssemblyName>Bytefeld.Epc</AssemblyName>
-    <RootNamespace>Bytefeld.Epc</RootNamespace>
-    <PackageReleaseNotes>First public release. Not feature complete, but should usable. Feedback welcome.</PackageReleaseNotes>
-    <Product>Bytefeld EPC Library</Product>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>net6.0</TargetFrameworks>
+		<Authors>Norbert Wagner (nw@bytefeld.com)</Authors>
+		<Company>Bytefeld GmbH &amp; Co. KG</Company>
+		<Description>Electronic Product Code (EPC) Decoding Library for .NET</Description>
+		<Copyright>2017 (c) Bytefeld GmbH &amp; Co. KG</Copyright>
+		<PackageProjectUrl>https://github.com/bytefeld/epc.net</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/bytefeld/epc.net</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseUrl>https://github.com/bytefeld/epc.net/blob/master/LICENSE</PackageLicenseUrl>
+		<Version>0.5.0-beta2</Version>
+		<PackageId>Bytefeld.EPC</PackageId>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageTags>EPC SSCC SGTIN RFID</PackageTags>
+		<AssemblyName>Bytefeld.Epc</AssemblyName>
+		<RootNamespace>Bytefeld.Epc</RootNamespace>
+		<PackageReleaseNotes>First public release. Not feature complete, but should usable. Feedback welcome.</PackageReleaseNotes>
+		<Product>Bytefeld EPC Library</Product>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.4|AnyCPU'">
-    <DefineConstants>TRACE;RELEASE;</DefineConstants>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0|AnyCPU'">
+		<DefineConstants>TRACE;RELEASE;</DefineConstants>
+	</PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.4'">
-    <Compile Remove="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Properties\" />
+	</ItemGroup>
 
 </Project>
